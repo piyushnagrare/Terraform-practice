@@ -41,4 +41,4 @@ resource "aws_subnet" "name" {
     }
   }
 
- print("aws")
+ 
