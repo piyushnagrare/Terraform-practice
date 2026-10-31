@@ -40,3 +40,5 @@ resource "aws_subnet" "name" {
         Name="public-subnet"
     }
   }
+
+ print("aws")
