@@ -275,3 +275,6 @@ resource "aws_route_table_association" "subnet_association" {
   subnet_id = aws_subnet.subnet_3.id
   
 }
+
+"I am not even sure i know myself and what's really important to me,
+ I have to ask myself --- is it worthy?"
