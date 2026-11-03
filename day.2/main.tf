@@ -1,10 +1,3 @@
-
-"I am not even sure i know myself and what's really important to me,
-I have to ask myself --- is it worthy?"
-
-
-
-
 # resource "aws_vpc" "project_2" {
 #   cidr_block = "10.0.0.0/16"
 
@@ -283,5 +276,12 @@ resource "aws_route_table_association" "subnet_association" {
   
 }
 
-"I am not even sure i know myself and what's really important to me,
- I have to ask myself --- is it worthy?"
+
+resource "aws_vpc" "project_1" {
+  cidr_block = "10.0.0.0/16"
+
+  tags={
+    Name = "project-1"
+  }
+  
+}
