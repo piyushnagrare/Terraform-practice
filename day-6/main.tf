@@ -43,8 +43,13 @@ resource "aws_route" "route-1" {
   
 }
 
-resource "aws_route_table-association" "association" {
-    gateway_id=aws_internet_gateway.ig.id
-    subnate_id=aws_subnet.me.id
+resource "aws_route_table_association" "association" {
+    route_table_id = aws_route_table.route-1.id
+    subnet_id=aws_subnet.me.id
+  
+}
+
+resource "aws_instance" "project-1" {
+    ami
   
 }
