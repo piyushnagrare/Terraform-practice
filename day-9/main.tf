@@ -50,3 +50,11 @@ resource "aws_route_table_association" "association" {
   
 }
 
+resource "aws_instance" "sever" {
+    ami="06f98347e4f9c7328"
+    instance_type = "t2.micro"
+
+    tags={
+        Name="dev"
+    }
+}
