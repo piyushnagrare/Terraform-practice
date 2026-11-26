@@ -1,7 +1,6 @@
 resource "aws_vpc" "project-1" {
     cidr_block = "10.0.0.0/16"
 
-
     tags={
         Name="project-1"
     }
@@ -24,33 +23,31 @@ resource "aws_subnet" "public" {
 
     tags={
         Name="public"
-
     }
   
 }
 
-resource "aws_route_table" "route-1" {
+resource "aws_route_table" "RT" {
     vpc_id = aws_vpc.project-1.id
 
-
     tags={
-        Name="route-1"
+        Name="RT"
     }
   
 }
 
-resource "aws_route" "route-1" {
-    route_table_id = aws_route_table.route-1.id
+resource "aws_route" "RT" {
+    route_table_id = aws_route_table.RT.id
     gateway_id = aws_internet_gateway.gate.id
     destination_cidr_block = "0.0.0.0/0"
   
 }
 
 resource "aws_route_table_association" "association" {
-    route_table_id = aws_route_table.route-1.id
+    route_table_id = aws_route_table.RT.id
     subnet_id = aws_subnet.public.id
     
+  
 }
-
 
 
